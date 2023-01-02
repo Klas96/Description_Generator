@@ -1,5 +1,15 @@
 class Character:
-  def __init__(self, name=None, equipment=None, personality=None, age=None, gender=None, hair_color=None, clothing=None, face_shape=None, ethnicity=None):
+  def __init__(self,
+               name=None,
+               equipment=None, 
+               personality=None, 
+               age=None, 
+               gender=None, 
+               hair_color=None, 
+               clothing=None, 
+               face_shape=None, 
+               ethnicity=None,
+               location=None):
     self.name = name
     self.equipment = equipment if equipment is not None else []
     self.personality = personality if personality is not None else []
@@ -9,8 +19,9 @@ class Character:
     self.clothing = clothing if clothing is not None else []
     self.face_shape = face_shape if face_shape is not None else []
     self.ethnicity = ethnicity
-    
-  def describe(self):
+    self.location = location
+
+  def __str__(self):
     description = ""
     if self.name:
       description += f"{self.name} is "
@@ -25,9 +36,9 @@ class Character:
     if self.equipment:
       description += f"equipped with {', '.join(self.equipment)}"
     if self.personality:
-      description += f", and has a {', '.join(self.personality)} personality."
+      description += f", and has a {', '.join(self.personality)} personality"
     if self.face_shape:
-      description += f", and has a {', '.join(self.face_shape)} face."
+      description += f", and has a {', '.join(self.face_shape)} face"
     if self.ethnicity:
       description += f", and is {self.ethnicity}."
       

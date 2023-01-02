@@ -1,15 +1,27 @@
 class Object:
-  def __init__(self, name, color, size):
+  """
+  This class represents an object with a name, color, size, and shape.
+  """
+  def __init__(self, name=None, color=None, size=None, shape=None):
+    """
+    Initialize the object with a name, color, size, and shape.
+    """
     self.name = name
     self.color = color
     self.size = size
+    self.shape = shape
     
   def __str__(self):
-    return f"This object is a {self.color} {self.name} of size {self.size}."
-
-# create an object
-obj = Object("box", "red", "large")
-
-# get the description of the object
-description = obj.describe()
-print(description)
+    """
+    Return a string representation of the object.
+    """
+    description = "This object is "
+    if self.color:
+      description += f"{self.color} "
+    if self.name:
+      description += f"{self.name} "
+    if self.size:
+      description += f"of size {self.size} "
+    if self.shape:
+      description += f"and shape {self.shape}."
+    return description
