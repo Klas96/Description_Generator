@@ -15,7 +15,7 @@ class Object:
     """
     Return a string representation of the object.
     """
-    description = "This object is "
+    description = ""
     if self.color:
       description += f"{self.color} "
     if self.name:
