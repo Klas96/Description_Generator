@@ -4,7 +4,7 @@ class Place:
     self.location = location
     self.type = type
     
-  def describe(self):
+  def __str__(self):
     return f"{self.name} is a {self.type} located in {self.location}."
 
 # create a place

@@ -4,7 +4,7 @@ class Object:
     self.color = color
     self.size = size
     
-  def describe(self):
+  def __str__(self):
     return f"This object is a {self.color} {self.name} of size {self.size}."
 
 # create an object
