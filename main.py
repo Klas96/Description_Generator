@@ -2,6 +2,7 @@ import character
 import place
 import object
 
+
 obj = object.Object(name="ball", color="red", shape="sphere")
 
 # create a character
